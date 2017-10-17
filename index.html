@@ -1,0 +1,26 @@
+<head>
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('.password').on("keyup", function(){
+        if ($(this).val() == "chariotgirl") { 
+          $(".download").removeAttr('disabled');
+        }
+        else {
+          $(".download").attr("disabled", true);
+        }
+      });
+    })
+  </script>
+</head>
+<body>
+  <header>
+    <a href="https://www.thejunglecats.com"><img src="logo.png"></img><a>
+  </header>
+  <main>
+    <h3>Enter promo code to access The Lurker download</h3>
+    <input class="password" placeholder="password" type="password"></input>
+    <a href=""><button class="download" disabled>DOWNLOAD</button></a>
+  </main>
+</body>
